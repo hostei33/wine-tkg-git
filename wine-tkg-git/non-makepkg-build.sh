@@ -349,14 +349,6 @@ build_wine_tkg() {
     _configure_args64+=(--libdir="$_prefix/$_lib64name")
     _configure_args32+=(--libdir="$_prefix/$_lib32name")
   fi
-
-  if [ "$_SKIPBUILDING" != "true" ] && [ "$_NOCOMPILE" != "true" ]; then
-    _build
-  fi
-
-  if [ "$_NOCOMPILE" != "true" ]; then
-    _package_nomakepkg
-  fi
 }
 
 _script_usage() {
